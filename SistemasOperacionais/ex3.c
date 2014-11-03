@@ -1,8 +1,8 @@
 /* 
- * File:   ex2.c
+ * File:   ex3.c
  * Author: danieljr
  *
- * Created on 3 de Novembro de 2014, 10:10
+ * Created on 3 de Novembro de 2014, 12:29
  */
 
 #include <stdlib.h>
@@ -14,7 +14,6 @@ void mensagem(int i) {
     long pid;
     pid = getpid();
     printf("Eu sou o %dº filho e meu PID é %ld\n", (i + 1), pid);
-    //sleep(5);
     exit(0);
 }
 
@@ -24,6 +23,7 @@ int main(void) {
     int i, n;
     printf("Quantidade de processos filhos a serem criados: ");
     scanf("%d", &n);
+    int child_status[n];
     for (i = 0; i < n; i++) {
         filho_pid = fork();
 
@@ -39,6 +39,7 @@ int main(void) {
                 puts("Erro");
                 exit(-1);
             default:
+                wait(&child_status[i]);
                 break;
         }
     }
@@ -48,3 +49,4 @@ int main(void) {
     printf("Eu sou o pai e meu PID é %ld\n", pid);
     return 0;
 }
+

@@ -36,7 +36,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/ex1.o \
-	${OBJECTDIR}/ex2.o
+	${OBJECTDIR}/ex2.o \
+	${OBJECTDIR}/ex3.o \
+	${OBJECTDIR}/ex4.o
 
 
 # C Compiler Flags
@@ -72,6 +74,16 @@ ${OBJECTDIR}/ex2.o: ex2.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ex2.o ex2.c
+
+${OBJECTDIR}/ex3.o: ex3.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ex3.o ex3.c
+
+${OBJECTDIR}/ex4.o: ex4.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ex4.o ex4.c
 
 # Subprojects
 .build-subprojects:
