@@ -43,11 +43,27 @@ void put_forks(int i) {
 void pensa(id){
 	printf("Filósofo %d pensando...\n");
 }
-void pega_garfos(id){
-	pthread_mutex_lock(&garfo);
-	estado_filosofo[i] = COMFOME;
+
+void pega_direita(id){
+
 }
-void come(id){}
+
+void pega_esquerda(id){
+	
+}
+
+void pega_garfos(id){
+	//pthread_mutex_lock(&garfo);
+	estado_filosofo[i] = COMFOME;
+	pega_direita(id);
+	pega_esquerda(id);
+	estado_filosofo[i] = COMENDO;
+}
+
+void come(id){
+	printf("Filósofo %d comendo");
+}
+
 void devolve_garfos(id){}
 
 void *filosofo(void *param) {
