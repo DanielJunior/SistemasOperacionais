@@ -1,3 +1,10 @@
+/* 
+ * File:   filosofos.c
+ * Author: danieljr
+ *
+ * Created on 20 de Novembro de 2014, 13:10
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
