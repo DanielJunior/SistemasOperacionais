@@ -1,0 +1,3 @@
+Os códigos em anexo são referentes aos exercícios do Trabalho 1.
+Para compilar os exercícios que utilizam threads, utilizar a seguinte linha de código:
+	gcc ex?.c -o ex? -lpthread

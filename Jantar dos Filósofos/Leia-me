@@ -1,0 +1,6 @@
+O código em anexo é sobre o tema do Jantar dos Filósofos.
+A solução utilizada é fazer um dos filósofos pegar o primeiro garfo no sentido oposto aos demais.
+Para a implementação foi utilizada a biblioteca Pthread.
+Para compilar o código fonte utilize : gcc filosofos.c -o filosofos -lpthread
+
+Obs.: Ignore os warnings ao compilar.

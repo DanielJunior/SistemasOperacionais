@@ -29,6 +29,10 @@ int main(void) {
     for (i = 0; i < n; i++) {
         pthread_create(&threads[i], NULL, run, (void *) i);
     }
+
+    for(i=0; i < n; i++){
+        pthread_join( threads[i], NULL);
+    }
     printf("\n-> Explicação: A chamada pthread_self não retorna o mesmo ID da thread de kernel que é o retorno da chamada do getid.\n"
             "Pthread_self retorna o id único da thread (TID) sob a perspectiva do processo.\n"
             "Getid retorna o chamado thread id group (TGID), sendo considerado o id único da thread sob a perspectiva do sistema.\n"
